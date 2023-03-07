@@ -8,9 +8,12 @@
     <context:annotation-config />
 
     <bean id="employee-1" class="com.hsenid.employee.model.Employee">
-        <constructor-arg index="0" value="sahan lakshith"/>
-        <constructor-arg index="1" value="dev"/>
-        <constructor-arg index="2" value="120000"/>
+<!--        <constructor-arg index="0" value="sahan lakshith"/>-->
+<!--        <constructor-arg index="1" value="dev"/>-->
+<!--        <constructor-arg index="2" value="120000"/>-->
+        <property name="name" value="sahan lakshith"/>
+        <property name="department" value="dev"/>
+        <property name="salary" value="150000"/>
     </bean>
 
     <bean id="employee-2" class="com.hsenid.employee.model.Employee">
@@ -25,5 +28,5 @@
         <constructor-arg index="2" value="180000"/>
     </bean>
 
-    <bean id="employeeService" class="com.hsenid.employee.service.EmployeeService"></bean>
+<!--    <bean id="employeeService" class="com.hsenid.employee.service.EmployeeService"></bean>-->
 </beans>
