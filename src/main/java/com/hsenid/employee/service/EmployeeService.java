@@ -35,14 +35,19 @@ public class EmployeeService {
 
 
 
+    public void setEmployees(List<Employee> employees) {
+        this.employees = employees;
+    }
 
     public List<String> fetchEmployee() {
         List<String> employeeNames = new ArrayList<String>();
         employees = new ArrayList<>();
         ConfigurableApplicationContext context = new ClassPathXmlApplicationContext( "employees.xml");
-        employees.add((Employee) context.getBean("employee-1"));
-        employees.add((Employee) context.getBean("employee-2"));
-        employees.add((Employee) context.getBean("employee-3"));
+//        employees.add((Employee) context.getBean("employee-1"));
+//        employees.add((Employee) context.getBean("employee-2"));
+//        employees.add((Employee) context.getBean("employee-3"));
+        this.employees= (List<Employee>) context.getBean("employeeList");
+
 
         for (Employee employee:employees){
             employeeNames.add(employee.getName());

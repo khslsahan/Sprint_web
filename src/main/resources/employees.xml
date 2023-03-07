@@ -7,6 +7,9 @@
 
     <context:annotation-config />
 
+
+
+
     <bean id="employee-1" class="com.hsenid.employee.model.Employee">
 <!--        <constructor-arg index="0" value="sahan lakshith"/>-->
 <!--        <constructor-arg index="1" value="dev"/>-->
@@ -28,5 +31,13 @@
         <constructor-arg index="2" value="180000"/>
     </bean>
 
-<!--    <bean id="employeeService" class="com.hsenid.employee.service.EmployeeService"></bean>-->
+    <bean id="employeeList" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <ref bean="employee-1" />
+                <ref bean="employee-2" />
+                <ref bean="employee-3" />
+            </list>
+        </constructor-arg>
+    </bean>
 </beans>
