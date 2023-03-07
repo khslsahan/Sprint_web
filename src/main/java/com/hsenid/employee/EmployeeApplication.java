@@ -9,13 +9,15 @@ import org.springframework.context.ConfigurableApplicationContext;
 public class EmployeeApplication {
 
 	public static void main(String[] args) {
-		ConfigurableApplicationContext context = SpringApplication.run(EmployeeApplication.class, args);
-		System.out.println("Hello World");
+//		ConfigurableApplicationContext context = SpringApplication.run(EmployeeApplication.class, args);
+//		System.out.println("Hello World");
 
-		EmployeeService employeeService = context.getBean(EmployeeService.class);
-		System.out.println(employeeService.fetchEmployee());
+		SpringApplication.run(EmployeeApplication.class, args);
 
-		context.close();
+		EmployeeService employeeService =  new EmployeeService();
+		employeeService.fetchEmployee();
+
+//		context.close();
 	}
 
 }

@@ -1,17 +1,29 @@
-<employees>
-    <employee>
-        <name>John Doe</name>
-        <department>IT</department>
-        <salary>50000</salary>
-    </employee>
-    <employee>
-        <name>Jane Smith</name>
-        <department>HR</department>
-        <salary>60000</salary>
-    </employee>
-    <employee>
-        <name>Bob Johnson</name>
-        <department>Finance</department>
-        <salary>70000</salary>
-    </employee>
-</employees>
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd http://www.springframework.org/schema/context https://www.springframework.org/schema/context/spring-context.xsd">
+
+    <context:annotation-config />
+
+    <bean id="employee-1" class="com.hsenid.employee.model.Employee">
+        <constructor-arg index="0" value="sahan lakshith"/>
+        <constructor-arg index="1" value="dev"/>
+        <constructor-arg index="2" value="120000"/>
+    </bean>
+
+    <bean id="employee-2" class="com.hsenid.employee.model.Employee">
+        <constructor-arg index="0" value="udeash ishara"/>
+        <constructor-arg index="1" value="dev-opps"/>
+        <constructor-arg index="2" value="150000"/>
+    </bean>
+
+    <bean id="employee-3" class="com.hsenid.employee.model.Employee">
+        <constructor-arg index="0" value="Danidu Wijendra"/>
+        <constructor-arg index="1" value="support"/>
+        <constructor-arg index="2" value="180000"/>
+    </bean>
+
+    <bean id="employeeService" class="com.hsenid.employee.service.EmployeeService"></bean>
+</beans>
